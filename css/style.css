@@ -1,19 +1,19 @@
-
 /*   Home Seciton    */
 
 #home {
     height: 100vh;
-    background: url('../images/top-mountain-eddited-descktop.png')  no-repeat;
+    background: url('../images/main-background-image.png') no-repeat;
     background-size: cover;
 }
 
+/*
 .background-image {
     position: absolute;
     z-index: -1;
-    /*width: 100%;*/
+    width: 100%;
     height: 100%;
-    
 }
+*/
 
 .main-logo {
     width: 150px;
@@ -28,20 +28,21 @@
 }
 
 .rectangular-top-left,
-.rectangular-top-center {
+.rectangular-top-center,
+.rectangular-top-left-about {
     position: absolute;
     z-index: 1;
     opacity: 0.42;
     border: 1px solid #979797;
 }
-    
-    
+
+
 .rectangular-top-left {
     left: 10%;
     top: 10%;
     height: 60%;
     width: 400px;
-}   
+}
 
 .rectangular-top-center {
     left: 30%;
@@ -54,15 +55,86 @@
 
 /*   About Seciton    */
 
-/*#about {*/
-/*    height: 100vh;*/
-/*    background: pink;*/
-/*}*/
+#about {
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    position: relative;
+}
+
+.rectangular-top-left-about {
+    left: 0;
+    top: 5px;
+    height: 450px;
+    width: 75%;
+    z-index: -1;
+}
+
+.about-us {
+    margin-top: -200px;
+    height: 500px;
+    width: 400px;
+    background: #343434;
+}
+
+.about-us h2 {
+    margin: 50px 30% 0;
+    color: #FCD091;
+}
+
+.about-us p {
+    padding: 15px 25px;
+    color: #fff;
+}
+
+.service-icons {
+    position: relative;
+}
+
+.ind-serv-icons {
+    top: -160px;
+    left: 150px;
+    /*    position: absolute;*/
+    width: 300px;
+    height: 300px;
+    background: #D8D8D8;
+}
 
 
 
+/*media queries*/
 
+@media all and (max-width: 1690px) {
+    ...
+}
 
+@media all and (max-width: 1280px) {
+    ...
+}
 
+@media all and (max-width: 980px) {
+    ...
+}
 
+@media all and (max-width: 736px) {
+    ...
+}
 
+@media all and (max-width: 480px) {
+
+    .rectangular-top-left,
+    .rectangular-top-center,
+    .rectangular-top-left-about {
+        display: none;
+    }
+    #home {
+        width: 100%;
+    }
+
+    .about-us {
+        width: auto;
+    }
+
+}
