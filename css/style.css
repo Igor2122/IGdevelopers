@@ -104,11 +104,9 @@ h1 {
 }
 
 .about-us>h2 {
-    font-family: header-font;
-    font-weight: -100;
+    font-family: header-font, sans-serif;
     margin: 50px 30% 0;
-    color: #FCD091;
-    font-family:
+    color: #FDC57C;
 }
 
 .about-us p {
@@ -121,12 +119,36 @@ h1 {
 }
 
 .ind-serv-icons {
-    top: -160px;
+    top: 330px;
     left: 150px;
-    /*    position: absolute;*/
-    width: 300px;
-    height: 300px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
     background: #D8D8D8;
+    display: inline-block;
+}
+
+.left-icon {
+    top: 240px;
+    right: 300px;
+    /* background: red; */
+}
+
+.top-icon {
+    top: 80px;
+    left: 360px;
+    /* background: pink; */
+}
+
+.right-icon {
+    top: 160px;
+    left: -60px;
+    /* background: silver; */
+}
+
+.bottom-icon {
+    top: 20px;
+    /* background: yellow; */
 }
 
 
@@ -134,19 +156,19 @@ h1 {
 /*media queries*/
 
 @media all and (max-width: 1690px) {
-    ...
+    
 }
 
 @media all and (max-width: 1280px) {
-    ...
+    
 }
 
 @media all and (max-width: 980px) {
-    ...
+    
 }
 
 @media all and (max-width: 736px) {
-    ...
+    
 }
 
 @media all and (max-width: 480px) {
@@ -160,8 +182,25 @@ h1 {
         width: 100%;
     }
 
+    
+    
+    .ind-serv-icons {
+        position: static;
+        display: block;
+    }
+    
     .about-us {
+        position: static;
         width: auto;
+    }
+
+    .about-us>h2 {
+        margin-left: 20%;
+    }
+
+    .ind-serv-icons {
+        width: 150px;
+        margin:  2% auto;
     }
 
 }
