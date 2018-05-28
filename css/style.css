@@ -5,6 +5,9 @@
   src:  url('../fonts/Hero.otf');
 }
 
+body {
+    overflow-x: hidden;
+}
 
 
 /*   Home Seciton    */
@@ -40,8 +43,8 @@ h1 {
     font-family: header-font;
     text-transform: capitalize;
     position: absolute;
-    top: 260px;
-    right: 70px;
+    top: 35%;
+    right: 17%;
     color: #fff;
     text-shadow: 4px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.50);
@@ -52,7 +55,10 @@ h1 {
 
 .rectangular-top-left,
 .rectangular-top-center,
-.rectangular-top-left-about {
+.rectangular-top-left-about,
+.rectangular-center-about,
+.rectangular-about-us-bottom,
+.rectangular-projects-us-bottom {
     position: absolute;
     z-index: -1;
     opacity: 0.42;
@@ -74,9 +80,22 @@ h1 {
     width: 70%;
 }
 
+.rectangular-center-about {
+    right: -10%;
+    top: 50%;
+    height: 50%;
+    width: 40%;
+}
+
 
 
 /*   About Seciton    */
+
+.about-heading,
+.projects-heading {
+    padding: 5%;
+    opacity: .5;
+}
 
 #about {
     height: 100vh;
@@ -89,39 +108,148 @@ h1 {
 
 .rectangular-top-left-about {
     left: 0;
-    top: 5px;
+    top: -50px;
     height: 450px;
-    width: 75%;
+    width: 65%;
     z-index: -1;
 }
+
+.rectangular-about-us-bottom {
+    right: -50%;
+    bottom: 10%;
+    height: 250px;
+    width: 55%;
+    z-index: -1;
+}
+
+/* .path-diagonal {
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    width: 100%;
+    height: 60%;
+} */
+
+.rectangular-about-us {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 400px 550px;
+    border-color: transparent transparent #343434 transparent;
+    line-height: 0px;
+    _border-color: #000000 #ffffff #343434 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    position: absolute;
+    opacity: .8;
+    z-index: 1;
+}
+
+.line-about-us {
+    width: 1px;
+    height: 300px;
+    top: 33%;
+    left: 50%;
+    background: #fff;
+    position: absolute;
+    z-index: 3;
+    -webkit-transform:
+            translateY(-20px)
+            translateX(5px)
+            rotate(54deg); 
+}
+
+
 
 .about-us {
     position: absolute;
     top: -20%;
     height: 500px;
-    width: 400px;
+    width: 550px;
     background: #343434;
 }
 
-.about-us>h2 {
+.about-us>h2,
+.our-projects-txt-div>h2 {
+    position: relative;
+    z-index: 5;
     font-family: header-font, sans-serif;
-    margin: 50px 30% 0;
     color: #FDC57C;
+    text-align: center;
+    margin-top: 15%;
 }
 
-.about-us p {
-    padding: 15px 25px;
+.about-us p,
+.our-projects-txt-div p {
+    padding: 45px 25px;
     color: #fff;
 }
+
+.stickers {
+    height: 200px;
+    width: 200px;
+    background: red;
+    position: relative;
+    top: 400px;
+    background: #FFD96A;
+    
+}
+
+
+
+.sticker-left {
+    left: -5%;
+    /* transform: rotate(10deg);   */
+    
+}
+
+.sticker-right {
+    left: 10%;
+    /* transform: rotate(-10deg); */
+}
+
+.tape {
+    height: 50px;
+    width: 100px;
+    background: #fff;
+    opacity: 0.5;
+    position: absolute;
+    top: -25px;
+    margin-left: 25%;
+}
+
+.html-icon {
+    width: 50px;
+    margin: 15% 0 0 40%;
+}
+
+p {
+    text-align: center;
+}
+
+.get-quote-button {
+    margin-left: 25%;
+}
+
+
+.e-icon-about-us {
+    position: absolute;
+    z-index: 1;
+    right: 30%;
+    top: -80px;
+    width: 30%;
+}
+
 
 .service-icons {
     position: relative;
 }
 
+
 .ind-serv-icons {
-    top: 330px;
-    left: 150px;
+    right: 10%;
+    /* top: -1  5%; */
     position: absolute;
+    z-index: 2;
     width: 150px;
     height: 150px;
     background: #D8D8D8;
@@ -129,38 +257,245 @@ h1 {
 }
 
 .left-icon {
-    top: 240px;
-    right: 300px;
+    top: 100px;
+    left: 32%;
     /* background: red; */
 }
 
 .top-icon {
-    top: 80px;
-    left: 360px;
-    /* background: pink; */
+    
 }
 
 .right-icon {
-    top: 160px;
-    left: -60px;
+    top: 100px;
+    right: -20%;
     /* background: silver; */
 }
 
 .bottom-icon {
-    top: 20px;
+    top: 180px;
+    /* background: ßpink; */
     /* background: yellow; */
 }
 
+.ui-ux-icon {
+    display: block;
+    margin: 5% auto;
+}
+
+h3 {
+    margin: 10% auto 0;
+    text-align: center;
+    font-family: header-font, sans-serif;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.icon-about-us {
+    margin-top: 15%;
+}
+
+
+
+/* projects seciton  */
+
+
+#our-projects {
+    height: 100vh;
+    position: relative;
+}
+
+.projects-heading {
+    position: absolute;
+    right: 30%;
+    top: -100px;
+}
+
+.w-logo {
+    width: 10%;
+    margin: auto;
+    position: relative;
+    left: 33%;
+}
+
+.rectangular-projects-us-bottom {
+    right: 10%;
+    top: 10%; 
+    height: 450px;
+    width: 70%;
+}
+
+.projects-backdrop {
+    
+}
+
+.our-projects-txt-div {
+    position: absolute;
+    top: -100px;
+    width: auto;
+    background: #343434;
+}
+
+.our-projects-websites {
+    background: url('../images/Rough-horizonal-lines-Grey-Seamless-Pattern-For-Website-Background.jpg') ;
+    background-size: cover;
+    height: 400px;
+}
+
+.line-projects {
+    width: 1px;
+    height: 300px;
+    background: #fff;
+    position: absolute;
+    z-index: 3;
+    -webkit-transform:
+            translateY(-50px)
+            translateX(50px)
+            rotate(5deg); 
+}
+
+.rectangular-projects {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 413px 353px;
+    border-color: transparent transparent #343434 transparent;
+    line-height: 0px;
+    _border-color: #000000 #ffffff #343434 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    position: absolute;
+    opacity: .8;
+    z-index: 1;
+}
+
+.modal-lauch-button {
+     background: #D2AF7E;
+}
+
+
+
+
+
+
+
+/* modal window */
+
+
+
+
+/* shadows */
+
+.about-us, 
+.ind-serv-icons,
+.stickers,
+.our-projects-txt-div,
+.our-projects-websites  {
+    -webkit-box-shadow: 3px -1px 65px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px -1px 65px -18px rgba(0,0,0,0.75);
+    box-shadow: 3px -1px 65px -18px rgba(0,0,0,0.75);
+}
+
+.sticker-left,
+.sticker-right {
+    position: relative;
+	width: 500px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.sticker-left:before, 
+.sticker-left:after,
+.sticker-right:before,
+.sticker-right:after {
+    position: absolute;
+	width: 40%;
+	height: 10px;
+	content: ' ';
+	left: 12px;
+	bottom: 12px;
+	background: transparent;
+	-webkit-transform: skew(-5deg) rotate(-5deg);
+	-moz-transform: skew(-5deg) rotate(-5deg);
+	-ms-transform: skew(-5deg) rotate(-5deg);
+	-o-transform: skew(-5deg) rotate(-5deg);
+	transform: skew(-12deg) rotate(-12deg);
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	z-index: -1;
+}
+
+.sticker-left:after,
+.sticker-right:after {
+    left: auto;
+	right: 12px;
+	-webkit-transform: skew(5deg) rotate(5deg);
+	-moz-transform: skew(5deg) rotate(5deg);
+	-ms-transform: skew(5deg) rotate(5deg);
+	-o-transform: skew(5deg) rotate(5deg);
+	transform: skew(12deg) rotate(12deg);
+}
 
 
 /*media queries*/
 
-@media all and (max-width: 1690px) {
+/*  mobile  */
+
+
+@media all and (max-width: 2100px) {
+    .line-about-us {
+        top: 33%;
+        left: 42%;
+        -webkit-transform:
+                translateY(-20px)
+                translateX(5px)
+                rotate(54deg); 
+    }
     
 }
 
+
+@media all and (max-width: 1690px) {
+    .line-about-us {
+        top: 33%;
+        left: 42%;
+        -webkit-transform:
+                translateY(-20px)
+                translateX(5px)
+                rotate(54deg); 
+    }
+
+.line-projects {
+    top:  13px;
+    left: 39%;
+    -webkit-transform: translateY(-10px) translateX(5px) rotate(42deg);
+}
+}
+
 @media all and (max-width: 1280px) {
-    
+    .line-about-us {
+        top: 33%;
+        left: 49%;
+        -webkit-transform:
+                translateY(-20px)
+                translateX(5px)
+                rotate(54deg); 
+    }
+
+    .ind-serv-icons,
+    .projects-heading,
+    .our-projects-txt-div {
+        position: inherit;
+    }
+
+    .stickers,
+    .rectangular-projects,
+    .line-about-us,
+    .line-projects {
+        display: none;
+    }
 }
 
 @media all and (max-width: 980px) {
@@ -175,7 +510,10 @@ h1 {
 
     .rectangular-top-left,
     .rectangular-top-center,
-    .rectangular-top-left-about {
+    .rectangular-top-left-about,
+    .rectangular-about-us-bottom,
+    .rectangular-center-about,
+    .rectangular-projects-us-bottom {
         display: none;
     }
     #home {
@@ -194,13 +532,20 @@ h1 {
         width: auto;
     }
 
-    .about-us>h2 {
-        margin-left: 20%;
+    .about-us > h2 {
+        text-align: center;
+        padding-top: 20%;
+        
     }
 
     .ind-serv-icons {
         width: 150px;
         margin:  2% auto;
+    }
+
+    .rectangular-about-us,
+    .e-icon-about-us {
+        display: none;
     }
 
 }
