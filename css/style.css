@@ -441,7 +441,7 @@ h3 {
 
 /*media queries*/
 
-/*  mobile  */
+
 
 
 @media all and (max-width: 2100px) {
@@ -496,6 +496,16 @@ h3 {
     .line-projects {
         display: none;
     }
+
+    .ind-serv-icons {
+        z-index: 0;
+    }
+
+    .our-projects-websites {
+        height: auto;
+    }
+
+    
 }
 
 @media all and (max-width: 980px) {
@@ -505,6 +515,8 @@ h3 {
 @media all and (max-width: 736px) {
     
 }
+
+/*  mobile  */
 
 @media all and (max-width: 480px) {
 
@@ -546,6 +558,14 @@ h3 {
     .rectangular-about-us,
     .e-icon-about-us {
         display: none;
+    }
+
+    .our-projects-websites {
+        z-index: 0;
+    }
+
+    .our-projects-txt-div {
+    top: 0;
     }
 
 }
